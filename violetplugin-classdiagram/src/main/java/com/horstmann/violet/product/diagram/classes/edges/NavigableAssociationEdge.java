@@ -3,7 +3,7 @@ package com.horstmann.violet.product.diagram.classes.edges;
 import com.horstmann.violet.product.diagram.abstracts.property.ArrowHead;
 import com.horstmann.violet.product.diagram.abstracts.property.LineStyle;
 
-public class AssociationEdge extends ClassRelationshipEdge
+public class NavigableAssociationEdge extends ClassRelationshipEdge
 {
 
     @Override

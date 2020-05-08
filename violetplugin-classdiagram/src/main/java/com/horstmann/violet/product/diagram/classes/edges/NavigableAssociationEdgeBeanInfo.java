@@ -7,7 +7,7 @@ import java.beans.SimpleBeanInfo;
 /**
  * The bean info for the ClassRelationshipEdge type.
  */
-public class AssociationEdgeBeanInfo extends SimpleBeanInfo
+public class NavigableAssociationEdgeBeanInfo extends SimpleBeanInfo
 {
 
     @Override
@@ -16,12 +16,12 @@ public class AssociationEdgeBeanInfo extends SimpleBeanInfo
         try
         {
             PropertyDescriptor[] descriptors = new PropertyDescriptor[]
-                    {
-                            new PropertyDescriptor("startLabel", AssociationArrowEdge.class),
-                            new PropertyDescriptor("middleLabel", AssociationArrowEdge.class),
-                            new PropertyDescriptor("endLabel", AssociationArrowEdge.class),
-                            new PropertyDescriptor("bentStyle", AssociationArrowEdge.class),
-                    };
+            {
+                    new PropertyDescriptor("startLabel", NavigableAssociationEdge.class),
+                    new PropertyDescriptor("middleLabel", NavigableAssociationEdge.class),
+                    new PropertyDescriptor("endLabel", NavigableAssociationEdge.class),
+                    new PropertyDescriptor("bentStyle", NavigableAssociationEdge.class),
+            };
             for (int i = 0; i < descriptors.length; i++)
             {
                 descriptors[i].setValue("priority", new Integer(i));

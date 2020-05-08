@@ -48,11 +48,6 @@
 			<artifactId>violetplugin-objectdiagram</artifactId>
 			<version>${applicationVersion}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.horstmann.violet</groupId>
-			<artifactId>violetplugin-jhdiagram</artifactId>
-			<version>${applicationVersion}</version>
-		</dependency>
 	</dependencies>
 	<build>
 		<finalName>violetumleditor-${project.version}</finalName>

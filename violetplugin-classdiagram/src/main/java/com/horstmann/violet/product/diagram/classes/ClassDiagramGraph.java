@@ -8,16 +8,10 @@ import java.util.ResourceBundle;
 import com.horstmann.violet.product.diagram.abstracts.AbstractGraph;
 import com.horstmann.violet.product.diagram.abstracts.edge.IEdge;
 import com.horstmann.violet.product.diagram.abstracts.node.INode;
-import com.horstmann.violet.product.diagram.classes.edges.AggregationEdge;
-import com.horstmann.violet.product.diagram.classes.edges.AssociationEdge;
-import com.horstmann.violet.product.diagram.classes.edges.CompositionEdge;
-import com.horstmann.violet.product.diagram.classes.edges.DependencyEdge;
-import com.horstmann.violet.product.diagram.classes.edges.InheritanceEdge;
-import com.horstmann.violet.product.diagram.classes.edges.InterfaceInheritanceEdge;
+import com.horstmann.violet.product.diagram.classes.edges.*;
 import com.horstmann.violet.product.diagram.classes.nodes.ClassNode;
 import com.horstmann.violet.product.diagram.classes.nodes.InterfaceNode;
 import com.horstmann.violet.product.diagram.classes.nodes.PackageNode;
-import com.horstmann.violet.product.diagram.common.ImageNode;
 import com.horstmann.violet.product.diagram.common.NoteEdge;
 import com.horstmann.violet.product.diagram.common.NoteNode;
 
@@ -77,7 +71,11 @@ public class ClassDiagramGraph extends AbstractGraph
         interfaceInheritance.setToolTip(rs.getString("edge2.tooltip"));
         EDGE_PROTOTYPES.add(interfaceInheritance);
 
-        AssociationEdge association = new AssociationEdge();
+        AssociationArrowEdge associationArrowEdge = new AssociationArrowEdge();
+        associationArrowEdge.setToolTip(rs.getString("edge7.tooltip"));
+        EDGE_PROTOTYPES.add(associationArrowEdge);
+
+        NavigableAssociationEdge association = new NavigableAssociationEdge();
         association.setToolTip(rs.getString("edge3.tooltip"));
         EDGE_PROTOTYPES.add(association);
 
